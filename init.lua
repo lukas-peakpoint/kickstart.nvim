@@ -624,8 +624,7 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        -- ts_ls = {},
-        --
+        -- ts_ls = {}
 
         lua_ls = {
           -- cmd = { ... },
@@ -672,6 +671,11 @@ require('lazy').setup({
         },
       }
     end,
+  },
+  { -- Typescript plugin
+    'pmizio/typescript-tools.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+    opts = {},
   },
 
   { -- Autoformat
@@ -832,6 +836,8 @@ require('lazy').setup({
       }
     end,
   },
+
+  'jiangmiao/auto-pairs',
 
   { -- You can easily change to a different colorscheme.
     -- Change the name of the colorscheme plugin below, and then
