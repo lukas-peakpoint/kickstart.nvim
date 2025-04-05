@@ -654,6 +654,16 @@ require('lazy').setup({
             },
           },
         },
+        solargraph = {
+          settings = {
+            solargraph = {
+              diagnostics = true,
+              formatting = true,
+              completion = true,
+              rename = true,
+            },
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -683,6 +693,8 @@ require('lazy').setup({
             require('lspconfig')[server_name].setup(server)
           end,
         },
+        automatic_installation = true,
+        ensure_installed = { 'solargraph' },
       }
     end,
   },
